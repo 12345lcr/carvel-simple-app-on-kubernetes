@@ -21,6 +21,8 @@ kind: Deployment
 metadata:
   namespace: default
   name: simple-app
+  annotations:
+    kapp.k14s.io/disable-default-label-scoping-rules: ""
 spec:
   selector:
     matchLabels: #@ labels()
